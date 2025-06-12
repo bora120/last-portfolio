@@ -316,6 +316,7 @@ main.container {
   padding-top: 9rem !important;
 }
 
+/* 💻 태블릿 이하 (992px 이하) 대응 */
 @media (max-width: 992px) {
   .section,
   .hero,
@@ -330,7 +331,40 @@ main.container {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
+    align-items: center;
+  }
+
+  .projects-container,
+  .study-container {
+    max-width: 100%;
+    padding: 5rem 1rem 3rem;
+  }
+
+  .hero,
+  .section,
+  .motto-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .project-card,
+  .study-card {
+    padding: 2rem;
+  }
+
+  .team-members {
+    gap: 2rem;
+  }
+
+  .member {
+    padding: 1.5rem;
+  }
+}
+
+/* 📱 스마트폰 대응 (768px 이하) */
+@media (max-width: 768px) {
+  .menu {
     width: 100%;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -342,12 +376,6 @@ main.container {
     white-space: nowrap;
   }
 
-  .projects-container,
-  .study-container {
-    max-width: 100%;
-    padding: 5rem 1rem 3rem;
-  }
-
   img,
   .card-img-top,
   .profile-img,
@@ -356,12 +384,9 @@ main.container {
     width: 100%;
     height: auto;
     max-width: 100%;
-  }
-
-  .hero,
-  .section,
-  .motto-section {
-    padding: 4rem 1.5rem;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 
   .hero-text h1,
@@ -373,36 +398,17 @@ main.container {
     font-size: 1rem;
   }
 
-  .project-card {
-    padding: 2rem;
-  }
-
   .project-card h2 {
     font-size: 1.2rem;
   }
 
-  .project-card p {
-    font-size: 1rem;
-  }
-
-  .study-card {
-    padding: 1.8rem;
-  }
-
-  .study-card .card-title {
-    font-size: 1.1rem;
-  }
-
+  .project-card p,
   .study-card p {
     font-size: 1rem;
   }
 
-  .team-members {
-    gap: 2rem;
-  }
-
-  .member {
-    padding: 1.5rem;
+  .study-card .card-title {
+    font-size: 1.1rem;
   }
 
   .team-title {
@@ -416,10 +422,20 @@ main.container {
   .member .role {
     font-size: 0.95rem;
   }
-}
 
-body {
-  overflow-x: hidden;
+  .logo {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section,
+  .hero,
+  .motto-section,
+  main.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
 }
 
 /* 🎇 fancy-in 애니메이션 효과 */
