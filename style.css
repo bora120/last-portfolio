@@ -46,6 +46,7 @@ body {
   background: var(--light-bg);
   transition: background 0.5s ease;
   line-height: 1.85;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 h1,
@@ -316,21 +317,26 @@ main.container {
 }
 
 @media (max-width: 992px) {
+  .section,
+  .hero,
+  .navbar,
+  main.container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 5rem !important; /* 여기로 합치자 */
+  }
+
   .menu {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
   }
 
-  main.container {
-    padding-top: 5rem !important;
-    max-width: 100%;
-  }
-
-  .section,
   .projects-container,
   .study-container {
     max-width: 100%;
+    padding: 5rem 1rem 3rem;
   }
 
   img,
@@ -358,10 +364,6 @@ main.container {
     font-size: 1rem;
   }
 
-  .projects-container {
-    padding: 5rem 1rem 3rem;
-  }
-
   .project-card {
     padding: 2rem;
   }
@@ -372,10 +374,6 @@ main.container {
 
   .project-card p {
     font-size: 1rem;
-  }
-
-  .study-container {
-    padding: 5rem 1rem;
   }
 
   .study-card {
@@ -409,6 +407,10 @@ main.container {
   .member .role {
     font-size: 0.95rem;
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* 🎇 fancy-in 애니메이션 효과 */
