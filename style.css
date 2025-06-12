@@ -325,6 +325,7 @@ main.container {
     max-width: 100%;
     overflow-x: hidden;
     padding-top: 5rem !important;
+    box-sizing: border-box;
   }
 
   .menu {
@@ -362,12 +363,21 @@ main.container {
 
 /* 📱 스마트폰 대응 (768px 이하) */
 @media (max-width: 768px) {
-  .menu {
-    width: 100%;
+  .nav-container {
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+    max-width: 100%;
   }
 
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
   .menu a {
     display: block;
     width: 100%;
@@ -381,12 +391,12 @@ main.container {
   .profile-img,
   .about-intro-img,
   .team-profile-img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+    width: 140px;
+    height: 140px;
+    max-width: 90%;
     object-fit: cover;
-    display: block;
     margin: 0 auto;
+    display: block;
   }
 
   .hero-text h1,
