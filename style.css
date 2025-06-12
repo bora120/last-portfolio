@@ -311,11 +311,36 @@ body.study-theme.scrolled {
   }
 }
 
+main.container {
+  padding-top: 9rem !important;
+}
+
 @media (max-width: 992px) {
   .menu {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
+  }
+
+  main.container {
+    padding-top: 5rem !important;
+    max-width: 100%;
+  }
+
+  .section,
+  .projects-container,
+  .study-container {
+    max-width: 100%;
+  }
+
+  img,
+  .card-img-top,
+  .profile-img,
+  .about-intro-img,
+  .team-profile-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
 
   .hero,
@@ -331,10 +356,6 @@ body.study-theme.scrolled {
 
   .hero-text p {
     font-size: 1rem;
-  }
-
-  main.container {
-    padding-top: 9rem !important;
   }
 
   .projects-container {
