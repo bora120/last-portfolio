@@ -50,20 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.remove('scrolled')
     }
   })
-
-  // ✨ 부드럽게 움직이는 배경 오브젝트 생성
-  const bgContainer = document.createElement('div')
-  bgContainer.classList.add('floating-bg')
-  document.body.appendChild(bgContainer)
-
-  for (let i = 0; i < 10; i++) {
-    const circle = document.createElement('div')
-    circle.classList.add('floating-circle')
-    const size = Math.random() * 60 + 20
-    circle.style.width = `${size}px`
-    circle.style.height = `${size}px`
-    circle.style.left = `${Math.random() * 100}%`
-    circle.style.animationDuration = `${15 + Math.random() * 10}s`
-    bgContainer.appendChild(circle)
-  }
 })

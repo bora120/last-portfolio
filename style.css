@@ -280,38 +280,6 @@ body.study-theme.scrolled {
   background: #f0e2ad; /* 연노랑 */
 }
 
-/* 6. 부드럽게 움직이는 배경 오브젝트 */
-.floating-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-.floating-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(230, 200, 255, 0.2);
-  animation: floatUp 20s linear infinite;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(-20vh);
-    opacity: 0;
-  }
-}
-
 main.container {
   padding-top: 9rem !important;
 }
@@ -448,6 +416,10 @@ main.container {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* 🎇 fancy-in 애니메이션 효과 */
 .fancy-in {
   opacity: 0;
@@ -528,18 +500,6 @@ main.container {
   font-size: 1.1rem;
   color: var(--text-sub);
   margin-bottom: 1rem;
-}
-
-/* 각 슬라이드 */
-.about-slide {
-  scroll-snap-align: start;
-  height: 100vh;
-  padding: 8rem 2rem 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 /* 🍬 각 슬라이드 기본 */
